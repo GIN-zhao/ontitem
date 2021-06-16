@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oneitem</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/animate.js"></script>
+    <script src="js/issue.js"></script>
+</head>
+
+<body>
+    <div class="w top">
+        <ul class="topul">
+            <li>在校学生 |</li>
+            <li>教职员工 |</li>
+            <li>校友天地 |</li>
+            <li>考生访客 </li>
+            <li>旧版入口 |</li>
+            <li>ENDGLISH |</li>
+            <li>VPN登录</li>
+        </ul>
+    </div>
+    <div class=" w imgetop">
+        <li class="imgetop-first"><img src="imge/logo.jpg" alt=""></li>
+        <li class="imgetop-second"><img src="imge/by.jpg" alt=""></li>
+    </div>
+    <div class="w navbar">
+        <ul class="navbar-u">
+            <!-- <li v-for="item in navtext">{{item}}</li> -->
+            <li> <a href="javacript:;"> 网站首页 | </a></li>
+            <li> <a href="">学校概况 |</a>
+                <div class="navbar-d">
+                    <ul class="navbar-left">
+                        <li>&gt; 学校章程</li>
+                        <li>&gt; 学校简介</li>
+                        <li>&gt; 现任领导</li>
+                        <li>&gt; 历任领导</li>
+                        <li>&gt; 校训</li>
+                        <li>&gt; 校赋</li>
+                    </ul>
+                    <ul class="navbar-mid">
+                        <li>&gt; 校徽院徽</li>
+                        <li>&gt; 校史沿革</li>
+                        <li>&gt; 校园全景漫游</li>
+                        <li>&gt; 校歌</li>
+                    </ul>
+                    <span><img src="/imge/zhuanshi1.jpg" alt=""></span>
+                </div>
+            </li>
+            <li> <a href="">新闻中心 |</a>
+            </li>
+            <li> <a href="">组织机构 | </a>
+                <div class="navbar-d">
+                    <ul class="navbar-left">
+                        <li>&gt; 本科生教育</li>
+                        <li>&gt; 探究生教育</li>
+
+                    </ul>
+                    <ul class="navbar-mid">
+                        <li>&gt; 继续教育</li>
+                        <li>&gt; MBA教育中心</li>
+                    </ul>
+                    <span><img src="/imge/navbar3.jpg" alt=""></span>
+                </div>
+            </li>
+            <li> <a href="">教育教学 | </a>
+                <div class="navbar-d">
+                    <ul class="navbar-left">
+                        <li>&gt; 本科生招生</li>
+                        <li>&gt; 研究生招生</li>
+                        <li>&gt; MBA教育招生</li>
+                        <li>&gt; 就业创业服务网络</li>
+
+                    </ul>
+                    <ul class="navbar-mid">
+                        <li>&gt; 留学生招生</li>
+                        <li>&gt; 继续教育招生</li>
+
+                    </ul>
+                    <span><img src="/imge/navbar4.jpg" alt=""></span>
+            </li>
+            <li> <a href="">学术科研 |</a>
+                <div class="navbar-d">
+                    <ul class="navbar-left">
+                        <li>&gt; 科研信息</li>
+                        <li>&gt; 研究机构</li>
+
+                    </ul>
+                    <ul class="navbar-mid">
+                        <li>&gt;工大学报</li>
+
+                    </ul>
+                    <span><img src="/imge/navbar2.jpg" alt=""></span>
+            </li>
+            <li> <a href="">信息公开 |</a>
+                <div class="navbar-d">
+                    <ul class="navbar-left">
+                        <li>&gt; 领导信箱</li>
+                        <li>&gt; 信息公开网</li>
+
+                    </ul>
+                    <ul class="navbar-mid">
+                        <li>&gt; 信息公开意见箱</li>
+
+                    </ul>
+                    <span><img src="/imge/navrbar5.jpg" alt=""></span>
+            </li>
+            <li> <a href="">招生就业 |</a> </li>
+        </ul>
+        <script>
+            const navbarul = new Vue({
+                el: '.navbar-u',
+                data: {
+                    navtext: ['网站首页 |', '新闻中心 |', '学校概况 |', '组织机构 |', '教育教学 |', '学术科研 |', '信息公开 |', '招生就业 |']
+                }
+            })
+            $(function() {
+                // $(".navbar-u>li").on("mouseover", function() {
+                //     $(this).toggleClass("current");
+                //     console.log("jinguolee");
+                // })
+                $(".navbar-u>li>a").hover(function() {
+                    $(this).addClass("current");
+
+
+                })
+                $(".navbar-u>li>a").mouseleave(function() {
+                    $(this).removeClass("current");
+
+
+                });
+
+                $(".navbar-u>li").hover(function() {
+                    $(this).find('div').stop().slideToggle(300);
+                    console.log("silide");
+                })
+
+            })
+        </script>
+        <span class="search"><i class='bx bx-search-alt-2'></i></span>
+        </div>
+        <div class="w">
+            <div class="focus">
+                <a href="javascript:;" class="arrow-l">&lt;</a>
+                <a href="javascript:;" class="arrow-r">&gt;</a>
+                <ul class="focusul">
+                    <li>
+                        <img src="imge/1.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="imge/2.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="imge/3.jpg" alt="">
+                    </li>
+                    <li>
+                        <img src="imge/4.jpg" alt="">
+                    </li>
+
+                </ul>
+                <ol class="circle">
+
+                </ol>
+            </div>
+        </div>
+        <div class="w">
+            <div class="part2">
+                <div class="box">
+                    <div class="TabTitle">
+                        <ul>
+                            <li><img src="imge/c3.png" alt=""></li>
+                            <li><img src="imge/c2.png" alt=""></li>
+                            <li><img src="imge/c4.png" alt=""></li>
+                        </ul>
+                    </div>
+                    <script>
+                        $(function() {
+                            $(".Tabbox .item01").eq(0).show().siblings().hide()
+                            $(".TabTitle ul li").mouseover(function() {
+                                $(this).addClass("currents").siblings().removeClass("currents");
+                                var index = $(this).index();
+                                $(".Tabbox .item01").eq(index).stop().fadeIn().siblings().stop().fadeOut();
+
+
+
+                            })
+                            $(".TabTitle ul li").mouseleave(function() {
+                                $(this).removeClass("currents");
+
+                            })
+                        })
+                    </script>
+                    <div class="Tabbox">
+                        <div class="item01">
+                            <ul>
+                                <li>
+                                    <div class="left">
+                                        <h2 class="year-month"></h2>
+                                        <h2 class="day"></h2>
+                                    </div>
+                                    <div class="right">
+                                        <p> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <h2 class="year-month"></h2>
+                                        <h2 class="day"></h2>
+                                    </div>
+                                    <div class="right">
+                                        <p> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <h2 class="year-month"></h2>
+                                        <h2 class="day"></h2>
+                                    </div>
+                                    <div class="right">
+                                        <p> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <h2 class="year-month"></h2>
+                                        <h2 class="day"></h2>
+                                    </div>
+                                    <div class="right">
+                                        <p> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <h2 class="year-month"></h2>
+                                        <h2 class="day"></h2>
+                                    </div>
+                                    <div class="right">
+                                        <p> </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="left">
+                                        <h2 class="year-month"></h2>
+                                        <h2 class="day"></h2>
+                                    </div>
+                                    <div class="right">
+                                        <p></p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item01">
+
+                        </div>
+                        <div class="item01">
+                            <header>
+                                <section>
+                                    <label for="title">教务通知</label>
+                                    <input type="text" id="title" name="title" placeholder="添加ToDo" required="required" autocomplete="off" />
+                                </section>
+                            </header>
+                            <section>
+                                <h2>目前通知<span id="todocount"></span></h2>
+                                <ol id="todolist" class="demo-box">
+
+                                </ol>
+                                <h2>通知截至 <span id="donecount"></span></h2>
+                                <ul id="donelist">
+
+                                </ul>
+                            </section>
+                            <footer>
+                                Copyright &copy;2021 AHUT.CN
+                            </footer>
+                            </section>
+                        </div>
+
+                    </div>
+                    <script>
+                        $(function() {
+                            var date = new Date();
+                            $(".left .year-month").html(date.getFullYear() + '-' + ((date.getMonth()) + 1));
+                            $(".left .day").html(date.getDate()).css({
+                                fontSize: 20,
+
+                                margin: 10,
+                                fontWeight: 30
+                            })
+                            $(".right p").html("    <p> 【安徽青年报】手绘党史 模拟“长征”——安工大党史学习教育“活起来”“深下去”</p>")
+                        })
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="w">
+            <div class="part4">
+                <div class="dxlist">
+                    <ul>
+                        <li>
+                            <span><i class='bx bx-home-alt'></i></span>
+                            <a>智慧校园服务平台</a>
+                        </li>
+                        <li><span><i class='bx bx-home-alt'></i></span><a>教务系统</a></li>
+                        <li><span><i class='bx bxs-message-square-edit'></i></span><a>电子政务</a></li>
+                        <li><span><i class='bx bxs-book-open'></i></span><a>教务系统</a></li>
+                        <li><span><i class='bx bxl-github'></i></span><a>人才引进</a></li>
+                        <li><span><i class='bx bx-mail-send'></i></span><a>校园邮箱</a></li>
+                        <li><span><i class='bx bx-map-alt'></i></span><a>学术报告</a></li>
+                        <li><span><i class='bx bx-globe'></i></span><a>公共服务</a></li>
+                        <li><span><i class='bx bx-book-alt'></i></i></span><a>数字图书</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="w">
+            <div class="part3">
+                <div class="ztz1">
+                    <div class="column"><img src="/imge/c5.png" alt=""></div>
+                    <div class="ztznr">
+                        <div id="container2">
+                            <ul id="content2">
+                                <li>
+                                    <a href=""><img src="imge/li1.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li2.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li3.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li4.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li5.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li6.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li7.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li8.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li9.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li10.png" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li11.jpg" alt=""></a>
+                                </li>
+                                <li>
+                                    <a href=""><img src="imge/li12.png" alt=""></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <script>
+                            window.onload = function() {
+
+
+                                var segmentWidth = 0;
+                                $("#container2 #content2 li").each(function() {
+                                    segmentWidth += $(this).outerWidth(true);
+                                });
+
+                                $("#container2 #content2 li").clone().appendTo($("#container2 #content2"));
+
+                                run(50000);
+
+                                function run(interval) {
+                                    $("#container2 #content2").animate({
+                                        "left": -segmentWidth
+                                    }, interval, "linear", function() {
+                                        $("#container #content").css("left", 0);
+                                        run(50000);
+                                    });
+                                }
+
+                                $("#container2").mouseenter(function() {
+                                    $("#container2>#content2").stop();
+                                }).mouseleave(function() {
+                                    var passedCourse = -parseInt($("#container2 #content2").css("left"));
+                                    var time = 50000 * (1 - passedCourse / segmentWidth);
+                                    run(time);
+                                });
+                            };
+                        </script>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+</body>
+
+
+
+
+</html>
